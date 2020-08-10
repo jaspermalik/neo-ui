@@ -1,15 +1,14 @@
 <template>
-  <div>hi</div>
-  <Neo />
+  <div>导航栏 |
+    <router-link to="/">Neo</router-link> |
+    <router-link to="/xxx">Neo2</router-link>
+  </div>
+  <hr>
+  <router-view />
 </template>
 
 <script>
-import Neo from "./components/Neo.vue";
-
 export default {
   name: "App",
-  components: {
-    Neo,
-  },
 };
 </script>
