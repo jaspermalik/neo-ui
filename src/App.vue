@@ -3,13 +3,24 @@
 </template>
 
 <script lang="ts">
-import { ref, provide } from "vue";
+import { ref, provide, watchEffect, Ref } from "vue";
 
 export default {
   name: "App",
   setup() {
-    const width = document.documentElement.clientWidth;
-    const asideVisible = ref(width <= 500 ? false : true);
+    const width = ref<Ref<number>>(null);
+    const asideVisible = ref<Ref<boolean>>(null);
+
+    function handleResize() {
+      width.value = document.documentElement.clientWidth;
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    watchEffect(() => {
+      asideVisible.value = width.value <= 500 ? false : true;
+    });
+
     provide("asideVisible", asideVisible);
   },
 };
