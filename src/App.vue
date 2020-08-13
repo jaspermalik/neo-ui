@@ -4,18 +4,13 @@
 
 <script lang="ts">
 import { ref, provide, watchEffect, Ref } from "vue";
+import { useWindowClientWidth } from "./utils/useWindowClientWidth";
 
 export default {
   name: "App",
   setup() {
-    const width = ref<Ref<number>>(null);
     const asideVisible = ref<Ref<boolean>>(null);
-
-    function handleResize() {
-      width.value = document.documentElement.clientWidth;
-    }
-
-    window.addEventListener("resize", handleResize);
+    const { width } = useWindowClientWidth();
 
     watchEffect(() => {
       asideVisible.value = width.value <= 500 ? false : true;
