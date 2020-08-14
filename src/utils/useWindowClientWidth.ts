@@ -1,7 +1,7 @@
-import { ref, Ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 
 export function useWindowClientWidth() {
-  const width = ref<Ref<number>>(null);
+  const width = ref<number>(document.documentElement.clientWidth);
 
   function handleResize() {
     width.value = document.documentElement.clientWidth;

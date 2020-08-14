@@ -3,13 +3,14 @@
 </template>
 
 <script lang="ts">
-import { ref, provide, watchEffect, Ref } from "vue";
+import { ref, provide, watchEffect } from "vue";
 import { useWindowClientWidth } from "./utils/useWindowClientWidth";
 
 export default {
   name: "App",
   setup() {
-    const asideVisible = ref<Ref<boolean>>(null);
+    const asideVisible = ref(null);
+
     const { width } = useWindowClientWidth();
 
     watchEffect(() => {
