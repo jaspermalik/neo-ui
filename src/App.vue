@@ -5,6 +5,7 @@
 <script lang="ts">
 import { ref, provide, watchEffect } from "vue";
 import { useWindowClientWidth } from "./utils/useWindowClientWidth";
+import { router } from "./router";
 
 export default {
   name: "App",
@@ -18,6 +19,12 @@ export default {
     });
 
     provide("asideVisible", asideVisible);
+
+    router.afterEach(() => {
+      if (width.value <= 500) {
+        asideVisible.value = false;
+      }
+    });
   },
 };
 </script>
