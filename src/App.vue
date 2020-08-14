@@ -9,7 +9,7 @@ import { useWindowClientWidth } from "./utils/useWindowClientWidth";
 export default {
   name: "App",
   setup() {
-    const asideVisible = ref(null);
+    const asideVisible = ref<boolean>(null);
 
     const { width } = useWindowClientWidth();
 
