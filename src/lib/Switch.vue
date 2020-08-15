@@ -45,7 +45,7 @@ button {
     outline: none;
   }
   &.checked {
-    background-color: cadetblue;
+    background-color: #2CA04C;
   }
   &.checked > span {
     left: calc(100% - #{$h2} - 2px);
