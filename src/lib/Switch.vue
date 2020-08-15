@@ -38,6 +38,10 @@ button {
     width: $h2;
     background-color: white;
     border-radius: $h2 / 2;
+    transition: left ease-out 250ms;
+  }
+  &:focus {
+    outline: none;
   }
   &.checked {
     background-color: cadetblue;
