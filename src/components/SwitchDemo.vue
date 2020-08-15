@@ -1,5 +1,55 @@
 <template>
   <div>
-    SwitchDemo
+    <h1>Switch文档</h1>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
+    <p>Switch文档</p>
   </div>
 </template>
