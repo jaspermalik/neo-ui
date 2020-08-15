@@ -1,5 +1,5 @@
 <template>
   <div>
-    Switch实例
+    默认页面
   </div>
 </template>

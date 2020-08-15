@@ -1,5 +1,5 @@
 <template>
   <div>
-    Switch实例
+    Tabs示例
   </div>
 </template>
