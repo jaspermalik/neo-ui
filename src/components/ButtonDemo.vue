@@ -8,6 +8,8 @@
         @focus="onClick"
         @mousemove="onClick"
         size="small"
+        level="normal"
+        disabled
       >你好</Button>
     </div>
   </div>

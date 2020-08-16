@@ -8,8 +8,14 @@
 <script lang="ts">
 export default {
   inheritAttrs: false,
+  props: {
+    size: String,
+    disabled: Boolean,
+  },
   setup(props, context) {
     const { size, ...rest } = context.attrs;
+    console.log({ ...props });
+    console.log({ ...context.attrs });
     return {
       size,
       rest,
