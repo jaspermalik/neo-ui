@@ -3,11 +3,10 @@
     <div>Button 示例</div>
     <h1>示例</h1>
     <div>
-      <Button
-        @click="onClick"
-        @focus="onClick"
-        @mousemove="onClick"
-      >你好</Button>
+      <Button>你好</Button>
+      <Button theme="button">你好</Button>
+      <Button theme="link">你好</Button>
+      <Button theme="text">你好</Button>
     </div>
   </div>
 </template>
@@ -17,13 +16,6 @@ export default {
   components: {
     Button,
   },
-  setup() {
-    const onClick = () => {
-      console.log("hi");
-    };
-    return {
-      onClick,
-    };
-  },
+  setup() {},
 };
 </script>
