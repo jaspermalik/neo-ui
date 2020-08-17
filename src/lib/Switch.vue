@@ -1,6 +1,7 @@
 <template>
   <button
-    :class="{ checked: value }"
+    class="neo-switch"
+    :class="{ 'neo-checked': value }"
     @click="toggle"
   ><span></span></button>
 </template>
@@ -27,7 +28,7 @@ export default {
 <style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
-button {
+.neo-switch {
   height: $h;
   width: $h * 2;
   border: none;
@@ -47,10 +48,10 @@ button {
   &:focus {
     outline: none;
   }
-  &.checked {
+  &.neo-checked {
     background-color: #2ca04c;
   }
-  &.checked > span {
+  &.neo-checked > span {
     left: calc(100% - #{$h2} - 2px);
   }
 }
