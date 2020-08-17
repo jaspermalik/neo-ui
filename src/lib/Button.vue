@@ -1,30 +1,10 @@
 <template>
-  <div :size="size">
-    <button v-bind="rest">
-      <slot />
-    </button>
-  </div>
+  <button>
+    <slot />
+  </button>
 </template>
 <script lang="ts">
-export default {
-  inheritAttrs: false,
-  props: {
-    size: String,
-    disabled: Boolean,
-  },
-  setup(props, context) {
-    const { size, ...rest } = context.attrs;
-    console.log({ ...props });
-    console.log({ ...context.attrs });
-    return {
-      size,
-      rest,
-    };
-  },
-};
+export default {};
 </script>
 <style lang="scss" scoped>
-div {
-  border: 1px solid plum;
-}
 </style>
