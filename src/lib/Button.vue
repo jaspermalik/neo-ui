@@ -1,7 +1,7 @@
 <template>
   <button
     class="neo-button"
-    :class="`theme-${theme}`"
+    :class="{[`neo-theme-${theme}`]:theme}"
   >
     <slot />
   </button>
@@ -9,14 +9,11 @@
 <script lang="ts">
 export default {
   props: {
-    theme: {
-      type: String,
-      default: "button",
-    },
+    theme: String,
   },
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 $h: 32px;
 $border-color: #d9d9d9;
 $color: #333;

@@ -1,5 +1,8 @@
 <template>
-  <button :class="{ checked: value }" @click="toggle"><span></span></button>
+  <button
+    :class="{ checked: value }"
+    @click="toggle"
+  ><span></span></button>
 </template>
 
 <script lang="ts">
@@ -21,7 +24,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
 button {
@@ -45,7 +48,7 @@ button {
     outline: none;
   }
   &.checked {
-    background-color: #2CA04C;
+    background-color: #2ca04c;
   }
   &.checked > span {
     left: calc(100% - #{$h2} - 2px);
