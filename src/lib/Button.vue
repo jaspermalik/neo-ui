@@ -2,7 +2,12 @@
   <button
     class="neo-button"
     :class="classes"
+    :disabled="disabled"
   >
+    <span
+      v-if="loading"
+      class="neo-loading-indicator"
+    ></span>
     <slot />
   </button>
 </template>
@@ -13,6 +18,8 @@ export default {
     theme: { type: String, default: "button" },
     size: { type: String, default: "normal" },
     level: { type: String, default: "normal" },
+    disabled: { type: Boolean, default: false },
+    loading: { type: Boolean, default: false },
   },
   setup(props) {
     const { theme, size, level } = props;
@@ -35,6 +42,7 @@ $border-color: #d9d9d9;
 $color: #333;
 $blue: #1b68fa;
 $red: #da1e28;
+$grey: #c6c6c6;
 $radius: 4px;
 .neo-button {
   box-sizing: border-box;
@@ -96,6 +104,13 @@ $radius: 4px;
         border-color: darken($red, 10%);
       }
     }
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
+      &:hover {
+        border-color: $grey;
+      }
+    }
   }
   &.neo-theme-link {
     border-color: transparent;
@@ -111,6 +126,10 @@ $radius: 4px;
       &:focus {
         color: darken($red, 10%);
       }
+    }
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
     }
   }
   &.neo-theme-text {
@@ -134,6 +153,29 @@ $radius: 4px;
       &:focus {
         color: darken($red, 10%);
       }
+    }
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
+    }
+  }
+  > .neo-loading-indicator {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 4px;
+    border-radius: 7px;
+    border-color: $blue $blue $blue transparent;
+    border-style: solid;
+    border-width: 2px;
+    animation: neo-spin 1s infinite linear;
+  }
+  @keyframes neo-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
     }
   }
 }
