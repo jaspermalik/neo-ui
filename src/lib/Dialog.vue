@@ -1,16 +1,25 @@
 <template>
   <template v-if="visible">
-    <div class="neo-dialog-overlay"> </div>
+    <div
+      class="neo-dialog-overlay"
+      @click="onCloseOverlay"
+    ></div>
     <div class="neo-dialog-wrapper">
       <div class="neo-dialog">
-        <header>标题</header>
+        <header>标题 <span
+            @click="close"
+            class="neo-dialog-close"
+          ></span></header>
         <main>
           <p>第一行字</p>
           <p>第二行字</p>
         </main>
         <footer>
-          <Button level="main">OK</Button>
-          <Button>Cancel</Button>
+          <Button
+            level="main"
+            @click="ok"
+          >OK</Button>
+          <Button @click="cancel">Cancel</Button>
         </footer>
       </div>
     </div>
@@ -25,8 +34,47 @@ export default {
       type: Boolean,
       default: false,
     },
+    closeOnClickOverlay: {
+      type: Boolean,
+      default: true,
+    },
+    ok: {
+      type: Function,
+    },
+    cancel: {
+      type: Function,
+    },
   },
   components: { Button },
+  setup(props, context) {
+    const close = () => {
+      context.emit("update:visible", false);
+    };
+
+    const onCloseOverlay = () => {
+      if (props.closeOnClickOverlay) {
+        close();
+      }
+    };
+
+    const ok = () => {
+      if (props.ok?.()) {
+        close();
+      }
+    };
+
+    const cancel = () => {
+      props.cancel?.();
+      close();
+    };
+
+    return {
+      close,
+      onCloseOverlay,
+      ok,
+      cancel,
+    };
+  },
 };
 </script>
 
