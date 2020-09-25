@@ -41,16 +41,19 @@ export default {
     const container = ref<HTMLDivElement>(null);
 
     onMounted(() => {
-      watchEffect(() => {
-        const {
-          width,
-          left: left2,
-        } = selectedItem.value.getBoundingClientRect();
-        const { left: left1 } = container.value.getBoundingClientRect();
-        indicator.value.style.width = width + "px";
-        const left = left2 - left1;
-        indicator.value.style.left = left + "px";
-      });
+      watchEffect(
+        () => {
+          const {
+            width,
+            left: left2,
+          } = selectedItem.value.getBoundingClientRect();
+          const { left: left1 } = container.value.getBoundingClientRect();
+          indicator.value.style.width = width + "px";
+          const left = left2 - left1;
+          indicator.value.style.left = left + "px";
+        },
+        { flush: "sync" }
+      );
     });
 
     const defaults = context.slots.default();
@@ -110,7 +113,7 @@ $border-color: #e0e0e0;
       background: $blue;
       left: 0;
       bottom: -1px;
-      width: 100px;
+      width: 0;
       transition: all 250ms;
     }
   }
