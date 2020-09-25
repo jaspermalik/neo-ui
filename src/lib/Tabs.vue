@@ -52,7 +52,7 @@ export default {
           const left = left2 - left1;
           indicator.value.style.left = left + "px";
         },
-        { flush: "sync" }
+        { flush: "post" }
       );
     });
 
