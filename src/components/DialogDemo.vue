@@ -7,7 +7,13 @@
       v-model:visible="x"
       :ok="fn1"
       :cancel="fn2"
-    ></Dialog>
+    >
+      <template v-slot:title><strong>标题</strong></template>
+      <template v-slot:content>
+        <div>Hello</div>
+        <div>World</div>
+      </template>
+    </Dialog>
   </div>
 </template>
 
