@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="topnav-banner">
     <Topnav />
     <div class="banner">
       <h1>Neo-UI</h1>
@@ -18,13 +18,20 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.topnav-banner {
+  background: linear-gradient(
+    145deg,
+    rgba(227, 255, 253, 1) 0%,
+    rgba(183, 233, 230, 1) 58%,
+    rgba(204, 244, 241, 1) 100%
+  );
+}
 .banner {
   padding: 100px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #b9f6ca;
   > .actions {
     padding: 8px 0;
     a {
