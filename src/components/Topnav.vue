@@ -5,7 +5,10 @@
       <li>菜单1</li>
       <li>菜单2</li>
     </ul>
-    <span class="toggle-aside" @click="toggleAside"></span>
+    <span
+      class="toggle-aside"
+      @click="toggleAside"
+    ></span>
   </div>
 </template>
 <script lang="ts">
@@ -23,7 +26,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+$color: #007974;
 .topnav {
+  color: $color;
   display: flex;
   padding: 16px;
   position: fixed;
