@@ -19,7 +19,7 @@
         <use xlink:href="#icon-ts"></use>
       </svg>
       <svg class="icon">
-        <use xlink:href="#icon-light"></use>
+        <use xlink:href="#icon-code"></use>
       </svg>
     </div>
   </div>
@@ -41,6 +41,7 @@ $color: #007974;
     rgba(183, 233, 230, 1) 58%,
     rgba(204, 244, 241, 1) 100%
   );
+  clip-path: ellipse(80% 60% at 50% 40%);
 }
 .banner {
   color: $color;
