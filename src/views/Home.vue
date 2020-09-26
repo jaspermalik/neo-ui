@@ -1,13 +1,26 @@
 <template>
-  <div class="topnav-banner">
-    <Topnav />
-    <div class="banner">
-      <h1>Neo-UI</h1>
-      <h2>一个UI框架</h2>
-      <p class="actions">
-        <a href="https://github.com/jaspermalik/neo-ui">Github</a>
-        <router-link to="/doc">开始</router-link>
-      </p>
+  <div>
+    <div class="topnav-banner">
+      <Topnav />
+      <div class="banner">
+        <h1>Neo-UI</h1>
+        <h2>一个UI框架</h2>
+        <p class="actions">
+          <a href="https://github.com/jaspermalik/neo-ui">Github</a>
+          <router-link to="/doc">开始</router-link>
+        </p>
+      </div>
+    </div>
+    <div class="featrues">
+      <svg class="icon">
+        <use xlink:href="#icon-vue"></use>
+      </svg>
+      <svg class="icon">
+        <use xlink:href="#icon-ts"></use>
+      </svg>
+      <svg class="icon">
+        <use xlink:href="#icon-light"></use>
+      </svg>
     </div>
   </div>
 </template>
@@ -49,6 +62,13 @@ $color: #007974;
         text-decoration: none;
       }
     }
+  }
+}
+
+.featrues {
+  > svg {
+    width: 64px;
+    height: 64px;
   }
 }
 </style>
