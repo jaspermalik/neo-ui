@@ -14,12 +14,15 @@
         <div>World</div>
       </template>
     </Dialog>
+    <h2>示例2</h2>
+    <Button @click="showDialog">show</Button>
   </div>
 </template>
 
 <script lang="ts">
 import Dialog from "../lib/Dialog.vue";
 import Button from "../lib/Button.vue";
+import { openDialog } from "../lib/openDialog";
 import { ref } from "vue";
 export default {
   components: { Dialog, Button },
@@ -36,7 +39,20 @@ export default {
       console.log("cancel");
       return false;
     };
-    return { x, toggle, fn1, fn2 };
+    const showDialog = () => {
+      openDialog({
+        title: "你好",
+        content: "Hello world",
+        ok: () => {
+          console.log("ok");
+        },
+        cancel: () => {
+          console.log("cancel");
+        },
+        closeOnClickOverlay: false,
+      });
+    };
+    return { x, toggle, fn1, fn2, showDialog };
   },
 };
 </script>

@@ -61,7 +61,7 @@ export default {
     };
 
     const ok = () => {
-      if (props.ok?.()) {
+      if (props.ok?.() !== false) {
         close();
       }
     };
