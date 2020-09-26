@@ -81,7 +81,7 @@ export default {
 aside {
   background: #e8f5e9;
   width: 150px;
-  padding: 16px;
+  padding: 16px 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -90,10 +90,18 @@ aside {
   z-index: 2;
   > h2 {
     margin-bottom: 4px;
+    padding: 0 16px;
   }
   > ol {
     > li {
-      padding: 4px 0;
+      a {
+        padding: 4px 16px;
+        display: block;
+        text-decoration: none;
+      }
+      .router-link-active {
+        background-color: white;
+      }
     }
   }
   main {
