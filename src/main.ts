@@ -1,6 +1,6 @@
 import "./lib/neo.scss";
 import "./index.scss";
-import "github-markdown-css"
+import "github-markdown-css";
 import { createApp } from "vue";
 import App from "./App.vue";
 import { router } from "./router";
