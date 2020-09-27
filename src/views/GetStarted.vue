@@ -1,12 +1,18 @@
 <template>
-  <article class="markdown-body">
-    <h1>开始使用</h1>
-    <p>请先<router-link to="/doc/install">安装</router-link>本组件库</p>
+  <article
+    class="markdown-body"
+    v-html="md"
+  >
   </article>
 </template>
 
 <script>
-export default {};
+import md from "../markdown/getstarted.md";
+export default {
+  data() {
+    return { md };
+  },
+};
 </script>
 
 <style>
