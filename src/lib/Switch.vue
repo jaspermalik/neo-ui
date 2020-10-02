@@ -54,5 +54,14 @@ $h2: $h - 4px;
   &.neo-checked > span {
     left: calc(100% - #{$h2} - 2px);
   }
+  &:active{
+    >span {width:$h2 + 4px}
+  }
+  &.neo-checked:active {
+    > span {
+      width: $h2 + 4px;
+      margin-left: -4px;
+    }
+  }
 }
 </style>
